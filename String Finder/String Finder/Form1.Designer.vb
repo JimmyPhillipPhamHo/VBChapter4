@@ -28,14 +28,14 @@ Partial Class Form1
         Me.lblString = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtToFind = New System.Windows.Forms.TextBox()
+        Me.btnGo = New System.Windows.Forms.Button()
+        Me.lblResult = New System.Windows.Forms.Label()
         Me.txtStartIndex = New System.Windows.Forms.TextBox()
+        Me.txtToFind = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnGo = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -92,7 +92,7 @@ Partial Class Form1
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.btnGo)
-        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.lblResult)
         Me.GroupBox1.Controls.Add(Me.txtStartIndex)
         Me.GroupBox1.Controls.Add(Me.txtToFind)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -103,14 +103,29 @@ Partial Class Form1
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         '
-        'Label6
+        'btnGo
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(102, 65)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(121, 13)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Start searching at index:"
+        Me.btnGo.Location = New System.Drawing.Point(294, 62)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(58, 23)
+        Me.btnGo.TabIndex = 7
+        Me.btnGo.Text = "Go"
+        Me.btnGo.UseVisualStyleBackColor = True
+        '
+        'lblResult
+        '
+        Me.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblResult.Location = New System.Drawing.Point(105, 99)
+        Me.lblResult.Name = "lblResult"
+        Me.lblResult.Size = New System.Drawing.Size(364, 29)
+        Me.lblResult.TabIndex = 6
+        '
+        'txtStartIndex
+        '
+        Me.txtStartIndex.Location = New System.Drawing.Point(223, 62)
+        Me.txtStartIndex.Name = "txtStartIndex"
+        Me.txtStartIndex.Size = New System.Drawing.Size(53, 20)
+        Me.txtStartIndex.TabIndex = 5
         '
         'txtToFind
         '
@@ -119,12 +134,14 @@ Partial Class Form1
         Me.txtToFind.Size = New System.Drawing.Size(145, 20)
         Me.txtToFind.TabIndex = 4
         '
-        'txtStartIndex
+        'Label6
         '
-        Me.txtStartIndex.Location = New System.Drawing.Point(223, 62)
-        Me.txtStartIndex.Name = "txtStartIndex"
-        Me.txtStartIndex.Size = New System.Drawing.Size(53, 20)
-        Me.txtStartIndex.TabIndex = 5
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(102, 65)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(121, 13)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "Start searching at index:"
         '
         'Label7
         '
@@ -156,23 +173,6 @@ Partial Class Form1
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "30"
         '
-        'Label4
-        '
-        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Label4.Location = New System.Drawing.Point(105, 99)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(364, 29)
-        Me.Label4.TabIndex = 6
-        '
-        'btnGo
-        '
-        Me.btnGo.Location = New System.Drawing.Point(294, 62)
-        Me.btnGo.Name = "btnGo"
-        Me.btnGo.Size = New System.Drawing.Size(58, 23)
-        Me.btnGo.TabIndex = 7
-        Me.btnGo.Text = "Go"
-        Me.btnGo.UseVisualStyleBackColor = True
-        '
         'btnClose
         '
         Me.btnClose.Location = New System.Drawing.Point(266, 292)
@@ -197,7 +197,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "String Finder"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -211,7 +211,7 @@ Partial Class Form1
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents btnGo As System.Windows.Forms.Button
-    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents lblResult As System.Windows.Forms.Label
     Friend WithEvents txtStartIndex As System.Windows.Forms.TextBox
     Friend WithEvents txtToFind As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
